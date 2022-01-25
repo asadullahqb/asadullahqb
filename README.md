@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @asadullahqb
 - 👀 I’m interested in .NET (Xamarin and .NET MAUI especially) and C# as a programming language. 
-- 🌱 I’m currently learning Agile project management.
+- 🌱 I’m currently learning Data Science.
 - 💞️ I’m looking to collaborate on Software Development in C#, Data Science and Agile project management specifically in Azure DevOps.
 - 📫 How to reach me? Email me at asadullah.q.bhatti@gmail.com
 
