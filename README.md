@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @asadullahqb
-- 👀 I’m interested in Data Science, Python and C++ as a programming language. 
-- 🌱 I’m currently learning Optimization, Simulation, and about the Oil & Gas industry.
-- 💞️ I’m looking to collaborate on Data Science and Agile project delivery specifically in Azure DevOps.
+- 👀 I’m interested in Data Science, Python and leadership. 
+- 🌱 I’m currently learning Artificial Intelligence.
+- 💞️ I’m looking to collaborate on Data Science.
 - 📫 How to reach me? Email me at asadullah.q.bhatti@gmail.com
 
 <!---
