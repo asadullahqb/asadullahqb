@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @asadullahqb
-- 👀 I’m interested in Data Science, Python and leadership. 
-- 🌱 I’m currently learning Artificial Intelligence.
-- 💞️ I’m looking to collaborate on Data Science.
+- 👀 I’m really passionate about Data Science. 
+- 🌱 I’m currently learning Generative AI - specifically multi-modal ingestion and generation.
+- 💞️ I’m looking to collaborate on anything Software or AI-related.
 - 📫 How to reach me? Email me at asadullah.q.bhatti@gmail.com
 
 <!---
