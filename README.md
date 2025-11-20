@@ -2,7 +2,7 @@
   <img src="https://github.com/asadullahqb.png" width="120" style="border-radius: 50%; border: 3px solid #D35400;" alt="Asad Profile"/>
   <h1>🦁 Asadullah Qamar Bhatti 🦁</h1>
   <p>
-    <b>Full Stack Developer | AI Enthusiast | Aspiring Canadian 🇨🇦</b><br/>
+    <b>Full Stack Developer | AI Expert </b><br/>
     <i>"Building the Pride Rock of Software Engineering"</i>
   </p>
 
@@ -21,9 +21,9 @@ My journey from Malaysia to the global stage. I am currently focused on building
 
 | 🚩 Project / Goal | 🛠️ Tech Stack | 📅 Period | 🔗 Status / Repo |
 | :--- | :--- | :--- | :--- |
-| **Local-First Budget App** | Python, SQL, Chip-In API | *Nov 2025 - Present* | 🚧 **In Progress** |
+| **Personal Portfolio** | Python, SQL, Chip-In API | *Nov 2025 - Present* | 🚧 **In Progress** |
 | **Snowflake Forecasting** | SQL Stored Procs, Forecasting | *Oct 2025* | 📉 **Data Modeling** |
-| **ROCKGAP (GenAI Platform)** | Python, LangChain, Docker | *Jun 2025* | ✅ **Completed** |
+| **Medical Scribe POC (GenAI Platform)** | Python, HuggingFace, Docker | *Nov 2025* | ✅ **Completed** |
 | **Data Science Certifications** | Mathematics, AI Theory | *Upcoming* | 🎯 **Targeting** |
 
 <br/>
@@ -34,9 +34,12 @@ These configurations are the claws and teeth of my development workflow.
 
 | ⚙️ Tool | 📝 Description | 📂 Link to Config |
 | :--- | :--- | :--- |
-| **Neovim (nvim)** | My primary text editor. Setup for Python/Rust. | [View init.lua](./.config/nvim/) |
-| **Z Shell (.zshrc)** | Custom prompts, aliases for efficiency. | [View .zshrc](./.zshrc) |
-| **Tmux** | Terminal multiplexer for multitasking. | [View .tmux.conf](./.tmux.conf) |
+| **Trae** | My primary IDE. I pay for the Pro version to get more token credits. |
+| **Vercel** | For frontend deployments. |
+| **Render** | For FastAPI backend deployments. |
+| **PGVector** | For Database deployments. |
+
+^ Everything above is free-of-charge for hobbyists!
 
 <br/>
 
@@ -50,5 +53,5 @@ These configurations are the claws and teeth of my development workflow.
 
 ---
 <p align="center">
-  <i>Looking to collaborate on AI, Rust, or Data Science projects? <a href="mailto:your-email@example.com">Roar at me!</a></i>
+  <i>Looking to collaborate on AI, Software, or Data Science projects? <a href="mailto:asadullah.q.bhatti@gmail.com">Roar at me!</a></i>
 </p>
