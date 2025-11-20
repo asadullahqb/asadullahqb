@@ -19,7 +19,7 @@ My journey from Malaysia to the global stage. I am currently focused on building
 
 | 🚩 Project / Goal | 🛠️ Tech Stack | 📅 Period | 🔗 Status / Repo |
 | :--- | :--- | :--- | :--- |
-| **Personal Portfolio** | Python, SQL, Chip-In API | *Nov 2025 - Present* | 🚧 **In Progress** |
+| **Personal Portfolio** | Python, SQL, HuggingFace | *Nov 2025 - Present* | 🚧 **In Progress** |
 | **Snowflake Forecasting** | SQL Stored Procs, Forecasting | *Oct 2025* | 📉 **Data Modeling** |
 | **Medical Scribe POC (GenAI Platform)** | Python, HuggingFace, Docker | *Nov 2025* | ✅ **Completed** |
 | **Data Science Certifications** | Mathematics, AI Theory | *Upcoming* | 🎯 **Targeting** |
