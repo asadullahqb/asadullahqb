@@ -32,7 +32,7 @@ My journey from Malaysia to the global stage. I am currently focused on building
 
 These configurations are the claws and teeth of my development workflow.
 
-| ⚙️ Tool | 📝 Description | 📂 Link to Config |
+| ⚙️ Tool | 📝 Description |
 | :--- | :--- | :--- |
 | **Trae** | My primary IDE. I pay for the Pro version to get more token credits. |
 | **Vercel** | For frontend deployments. |
