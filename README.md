@@ -2,7 +2,7 @@
   <img src="https://github.com/asadullahqb.png" width="120" style="border-radius: 50%; border: 3px solid #D35400;" alt="Asad Profile"/>
   <h1>🦁 Asadullah Qamar Bhatti 🦁</h1>
   <p>
-    <b>Full Stack Developer | AI Expert </b><br/>
+    <b>Data Scientist | AI Expert </b><br/>
     <i>"Building the Pride Rock of Software Engineering"</i>
   </p>
 
@@ -26,37 +26,35 @@ My journey from Malaysia to the global stage. I am currently focused on building
 
 <br/>
 
-### ⚔️ The Lion's Toolkit (My Configs)
+### 🦁 Top 10 Modern Data Scientist Skills (2026)
+*Based on current industry demand and market analysis.*
 
-<!-- SKILLS_START -->
-### 🔥 Trending Data Science Skills (Auto-Updated)
-- Python
-- Transformers
-- LLM
-- PyTorch
-- Pandas
-<!-- SKILLS_END -->
-
-These configurations are the claws and teeth of my development workflow.
-
-| ⚙️ Tool | 📝 Description |
-| :--- | :--- | 
-| **Trae** | My primary IDE. I pay for the Pro version to get more token credits. |
-| **Vercel** | For frontend deployments. |
-| **Render** | For FastAPI backend deployments. |
-| **PGVector** | For Database deployments. |
-
-^ Everything above is free-of-charge for hobbyists!
+1.  **Python & R Programming** (The backbone of data science)
+2.  **SQL & NoSQL Databases** (Data extraction and management)
+3.  **Machine Learning & AI** (Predictive modeling and algorithms)
+4.  **Generative AI & NLP** (LLMs, Transformers, HuggingFace)
+5.  **Data Visualization** (Tableau, PowerBI, Matplotlib)
+6.  **Big Data Technologies** (Spark, Hadoop, Snowflake)
+7.  **MLOps & Deployment** (Docker, Kubernetes, Cloud Serving)
+8.  **Statistics & Probability** (Hypothesis testing, distributions)
+9.  **Data Wrangling & Cleaning** (Pandas, Polars)
+10. **Data Storytelling** (Communicating insights to stakeholders)
 
 <br/>
 
-### 📊 GitHub Stats
+### ⚔️ My Skills (The Lion's Toolkit)
+*Mapping my current technical arsenal to modern industry standards.*
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=asadullahqb&show_icons=true&theme=default&title_color=D35400&icon_color=F39C12&text_color=5D4037&bg_color=FFF8E1&hide_border=true" alt="Asad's GitHub Stats" />
-  <br/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=asadullahqb&layout=compact&theme=default&title_color=D35400&icon_color=F39C12&text_color=5D4037&bg_color=FFF8E1&hide_border=true" alt="Top Languages" />
-</div>
+| Industry Skill | My Tool Implementation |
+| :--- | :--- |
+| **Programming** | `Python` (Primary Driver) |
+| **Generative AI** | `HuggingFace` (Inference & Fine-tuning) |
+| **Model Deployment** | `Docker` & `FastAPI` & `Render` |
+| **Databases** | `SQL` & `PGVector` (Vector Embeddings) |
+| **IDE & Workflow** | `Trae` (AI-Augmented IDE) |
+| **Frontend** | `Vercel` (For demo interfaces) |
+
+<br/>
 
 ---
 <p align="center">
