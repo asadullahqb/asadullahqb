@@ -1,6 +1,7 @@
 import os
 import sys
 import requests
+import html
 from duckduckgo_search import DDGS
 from github import Github, Auth
 from datetime import datetime
@@ -18,19 +19,27 @@ def search_trends():
     
     try:
         results = DDGS().text(query, max_results=5)
+        if not results:
+            return "🦁 No trends found this week."
+
         # using HTML format for safety against random special characters in titles
         summary = "<b>🦁 Weekly Market Recon 🦁</b>\n\n"
         for i, r in enumerate(results, 1):
-            # Clean title of < and > to prevent HTML breakage
-            clean_title = r['title'].replace("<", "&lt;").replace(">", "&gt;")
-            summary += f"{i}. <a href='{r['href']}'>{clean_title}</a>\n"
+            # Clean title to prevent HTML breakage using html.escape
+            clean_title = html.escape(r.get('title', 'No Title'))
+            link = r.get('href', '#')
+            summary += f"{i}. <a href='{link}'>{clean_title}</a>\n"
         return summary
     except Exception as e:
         print(f"Error searching: {e}")
-        return "🦁 Could not fetch trends this week."
+        return f"🦁 Could not fetch trends this week. Error: {e}"
 
 def send_telegram(message, manual_link=None):
     """Sends the digest to Telegram."""
+    if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
+        print("❌ Telegram token or Chat ID missing.")
+        return
+
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
     
     payload = {
@@ -85,9 +94,7 @@ def update_readme(skills_text):
             end_index = content_decoded.find(end_marker)
             
             # Since skills_text is now an HTML summary, we might want to strip HTML or format it differently for Markdown
-            # For now, let's just inject it as is, but maybe wrapped in a comment or converted?
-            # Actually, the user's prompt implies 'skills_text' is the HTML summary.
-            # Inserting HTML directly into README is fine for GitHub.
+            # For now, let's just inject it as is. GitHub README supports HTML.
             
             new_content = (
                 content_decoded[:start_index] + 
@@ -113,14 +120,14 @@ def update_readme(skills_text):
 
 def main():
     # flexible argument handling
-    mode = "notify"
+    mode = "weekly"
     if len(sys.argv) > 1:
         mode = sys.argv[1]
     
     print(f"Running in {mode} mode")
     trends = search_trends()
     
-    if mode == "notify":
+    if mode in ["notify", "weekly"]:
         manual_trigger_link = f"https://github.com/{REPO_NAME}/actions/workflows/lion_agent.yml"
         send_telegram(trends, manual_trigger_link)
         
