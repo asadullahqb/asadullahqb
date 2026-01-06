@@ -28,6 +28,15 @@ My journey from Malaysia to the global stage. I am currently focused on building
 
 ### ⚔️ The Lion's Toolkit (My Configs)
 
+<!-- SKILLS_START -->
+### 🔥 Trending Data Science Skills (Auto-Updated)
+- Python
+- Transformers
+- LLM
+- PyTorch
+- Pandas
+<!-- SKILLS_END -->
+
 These configurations are the claws and teeth of my development workflow.
 
 | ⚙️ Tool | 📝 Description |
