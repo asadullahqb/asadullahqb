@@ -22,8 +22,9 @@ def get_trending_skills():
 
     g = Github(GITHUB_TOKEN)
     
-    # Search for data science repos created in the last 30 days
-    date_since = (datetime.now() - timedelta(days=30)).strftime("%Y-%m-%d")
+    # Search for data science repos created this year
+    current_year = datetime.now().year
+    date_since = f"{current_year}-01-01"
     query = f"topic:data-science created:>{date_since} sort:stars-desc"
     
     try:
