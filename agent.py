@@ -5,6 +5,10 @@ import html
 from duckduckgo_search import DDGS
 from github import Github, Auth
 from datetime import datetime
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # --- CONFIGURATION ---
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
