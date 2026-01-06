@@ -2,3 +2,5 @@ requests
 PyGithub
 duckduckgo-search
 python-dotenv
+beautifulsoup4
+huggingface_hub
