@@ -1,0 +1,28 @@
+name: Weekly Market Recon
+
+on:
+  schedule:
+    - cron: '0 9 * * 1' # Weekly: Monday at 9:00 AM UTC
+  workflow_dispatch:
+
+jobs:
+  run-recon:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Weekly Recon
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: python agent.py weekly

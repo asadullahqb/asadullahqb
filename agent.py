@@ -283,7 +283,7 @@ def main():
     trends = search_trends()
     
     if mode in ["notify", "weekly"]:
-        manual_trigger_link = f"https://github.com/{REPO_NAME}/actions/workflows/lion_agent.yml"
+        manual_trigger_link = f"https://github.com/{REPO_NAME}/actions/workflows/update_profile.yml"
         send_telegram(trends, manual_trigger_link, dry_run=dry_run)
         
     elif mode == "update":
