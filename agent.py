@@ -1,93 +1,77 @@
 import os
 import sys
 import requests
-from github import Github
-from collections import Counter
-from datetime import datetime, timedelta
+from duckduckgo_search import DDGS
+from github import Github, Auth
+from datetime import datetime
 
-# Configuration
-REPO_NAME = "asadullahqb/asadullahqb"
+# --- CONFIGURATION ---
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+REPO_NAME = "asadullahqb/asadullahqb"
 
-def get_trending_skills():
-    """
-    Fetches trending topics/languages from GitHub repositories related to Data Science.
-    """
-    print("Fetching trending skills...")
-    if not GITHUB_TOKEN:
-        print("Warning: GITHUB_TOKEN not set. Using fallback skills.")
-        return ["Python", "Transformers", "LLM", "PyTorch", "Data Science"]
-
-    g = Github(GITHUB_TOKEN)
-    
-    # Search for data science repos created this year
-    current_year = datetime.now().year
-    date_since = f"{current_year}-01-01"
-    query = f"topic:data-science created:>{date_since} sort:stars-desc"
+def search_trends():
+    """Searches for the latest Data Science skills."""
+    print("🦁 Hunting for latest skills...")
+    query = f"Top data scientist skills trends {datetime.now().year} market demand"
     
     try:
-        repos = g.search_repositories(query=query)
-        skills = []
-        
-        # Analyze top 20 repos
-        for i, repo in enumerate(repos):
-            if i >= 20: break
-            if repo.language:
-                skills.append(repo.language)
-            skills.extend(repo.get_topics())
-            
-        # Clean and count
-        # Filter out common non-skill topics
-        ignore = {'data-science', 'machine-learning', 'deep-learning', 'artificial-intelligence', 'hacktoberfest', 'project'}
-        cleaned_skills = [s for s in skills if s.lower() not in ignore]
-        
-        counter = Counter(cleaned_skills)
-        top_5 = counter.most_common(5)
-        return [skill[0] for skill in top_5]
-        
+        results = DDGS().text(query, max_results=5)
+        # using HTML format for safety against random special characters in titles
+        summary = "<b>🦁 Weekly Market Recon 🦁</b>\n\n"
+        for i, r in enumerate(results, 1):
+            # Clean title of < and > to prevent HTML breakage
+            clean_title = r['title'].replace("<", "&lt;").replace(">", "&gt;")
+            summary += f"{i}. <a href='{r['href']}'>{clean_title}</a>\n"
+        return summary
     except Exception as e:
-        print(f"Error fetching skills: {e}")
-        return ["Python", "PyTorch", "Transformers", "LLM", "Pandas"] # Fallback
+        print(f"Error searching: {e}")
+        return "🦁 Could not fetch trends this week."
 
-def send_telegram_digest(skills):
-    """
-    Sends a message to Telegram with the trending skills.
-    """
-    if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
-        print("Telegram credentials missing.")
-        return
-
-    message = f"🦁 **Lion Agent Weekly Digest**\n\n🔥 **Trending Data Science Skills:**\n"
-    for i, skill in enumerate(skills, 1):
-        message += f"{i}. {skill}\n"
-    
-    message += "\nStay ahead of the curve! 🚀"
-    
+def send_telegram(message, manual_link=None):
+    """Sends the digest to Telegram."""
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
+    
     payload = {
         "chat_id": TELEGRAM_CHAT_ID,
         "text": message,
-        "parse_mode": "Markdown"
+        "parse_mode": "HTML", # Switched to HTML for stability
+        "disable_web_page_preview": True # Keeps chat clean
     }
-    
+
+    if manual_link:
+        payload["reply_markup"] = {
+            "inline_keyboard": [[
+                {
+                    "text": "🚀 Force Update Profile Now",
+                    "url": manual_link
+                }
+            ]]
+        }
+
     try:
         response = requests.post(url, json=payload)
         response.raise_for_status()
-        print("Telegram message sent successfully.")
+        print("✅ Telegram message sent.")
     except Exception as e:
-        print(f"Failed to send Telegram message: {e}")
+        print(f"❌ Failed to send Telegram: {e}")
+        # Print response text to see exact error if it fails again
+        try:
+            print(f"Server response: {response.text}")
+        except:
+            pass
 
-def update_readme(skills):
-    """
-    Updates the README.md file with the top skills.
-    """
+def update_readme(skills_text):
+    """Updates the README (Quarterly Action)."""
     if not GITHUB_TOKEN:
         print("GitHub token missing.")
         return
 
-    g = Github(GITHUB_TOKEN)
+    # FIXED: The Deprecation Warning
+    auth = Auth.Token(GITHUB_TOKEN)
+    g = Github(auth=auth)
+    
     try:
         repo = g.get_repo(REPO_NAME)
         contents = repo.get_contents("README.md")
@@ -100,13 +84,14 @@ def update_readme(skills):
             start_index = content_decoded.find(start_marker) + len(start_marker)
             end_index = content_decoded.find(end_marker)
             
-            new_skills_section = "\n"
-            for skill in skills:
-                new_skills_section += f"- {skill}\n"
+            # Since skills_text is now an HTML summary, we might want to strip HTML or format it differently for Markdown
+            # For now, let's just inject it as is, but maybe wrapped in a comment or converted?
+            # Actually, the user's prompt implies 'skills_text' is the HTML summary.
+            # Inserting HTML directly into README is fine for GitHub.
             
             new_content = (
                 content_decoded[:start_index] + 
-                new_skills_section + 
+                "\n" + skills_text + "\n" +
                 content_decoded[end_index:]
             )
             
@@ -118,32 +103,30 @@ def update_readme(skills):
                     contents.sha
                 )
                 print("README.md updated successfully.")
-                send_telegram_notification("README.md updated with new trending skills!")
             else:
                 print("No changes needed for README.md.")
         else:
-            print("Markers not found in README.md. Please add <!-- SKILLS_START --> and <!-- SKILLS_END -->.")
-            send_telegram_notification("Lion Agent Warning: README markers not found.")
+            print("Markers not found in README.md.")
             
     except Exception as e:
         print(f"Failed to update README: {e}")
 
-def send_telegram_notification(text):
-    if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID: return
-    url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
-    requests.post(url, json={"chat_id": TELEGRAM_CHAT_ID, "text": text})
+def main():
+    # flexible argument handling
+    mode = "notify"
+    if len(sys.argv) > 1:
+        mode = sys.argv[1]
+    
+    print(f"Running in {mode} mode")
+    trends = search_trends()
+    
+    if mode == "notify":
+        manual_trigger_link = f"https://github.com/{REPO_NAME}/actions/workflows/lion_agent.yml"
+        send_telegram(trends, manual_trigger_link)
+        
+    elif mode == "update":
+        update_readme(trends)
+        send_telegram(f"✅ Quarterly Profile Update Complete!\n\nData used:\n{trends}")
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python agent.py [weekly|update]")
-        sys.exit(1)
-        
-    mode = sys.argv[1]
-    trending_skills = get_trending_skills()
-    
-    if mode == "weekly":
-        send_telegram_digest(trending_skills)
-    elif mode == "update":
-        update_readme(trending_skills)
-    else:
-        print(f"Unknown mode: {mode}")
+    main()
