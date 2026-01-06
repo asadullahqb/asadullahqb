@@ -56,17 +56,6 @@ My journey from Malaysia to the global stage. I am currently focused on building
 
 <br/>
 
-### 📊 GitHub Stats
-
-<div align="center">
-  <p>
-    <img src="https://github-readme-stats.vercel.app/api?username=asadullahqb&show_icons=true&theme=default&title_color=D35400&icon_color=F39C12&text_color=5D4037&bg_color=FFF8E1&hide_border=true" alt="Asad's GitHub Stats" />
-  </p>
-  <p>
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=asadullahqb&layout=compact&theme=default&title_color=D35400&icon_color=F39C12&text_color=5D4037&bg_color=FFF8E1&hide_border=true" alt="Top Languages" />
-  </p>
-</div>
-
 ---
 <p align="center">
   <i>Looking to collaborate on AI, Software, or Data Science projects? <a href="mailto:asadullah.q.bhatti@gmail.com">Roar at me!</a></i>
