@@ -1,9 +1,9 @@
 <div align="center">
   <img src="https://github.com/asadullahqb.png" width="120" style="border-radius: 50%; border: 3px solid #D35400;" alt="Asad Profile"/>
-  <h1>🦁 Asadullah Qamar Bhatti 🦁</h1>
+  <h1>Asadullah Qamar Bhatti</h1>
   <p>
-    <b>Data Scientist | AI Expert </b><br/>
-    <i>"Building the Pride Rock of Software Engineering"</i>
+    <b>Data Scientist</b><br/>
+    <i></i>
   </p>
 
   <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" alt="Python" />
@@ -15,18 +15,18 @@
 
 ### 🗺️ My Professional Roadmap
 
-My journey from Malaysia to the global stage. I am currently focused on building robust financial tools and mastering AI architecture.
+I am currently focused on building AI proof-of-concepts to strengthen my portfolio in Data Science and AI.
 
 | 🚩 Project / Goal | 🛠️ Tech Stack | 📅 Period | 🔗 Status / Repo |
 | :--- | :--- | :--- | :--- |
-| **Personal Portfolio** | Python, SQL, HuggingFace | *Nov 2025 - Present* | 🚧 **In Progress** |
-| **Snowflake Forecasting** | SQL Stored Procs, Forecasting | *Oct 2025* | 📉 **Data Modeling** |
-| **Medical Scribe POC (GenAI Platform)** | Python, HuggingFace, Docker | *Nov 2025* | ✅ **Completed** |
+| **The "Agentic Workflow" Showcase** | Python, SQL, HuggingFace | *Jun 2026 - Present* | 🚧 **In Progress** |
+| **The Medical VQA"** | SQL Stored Procs, Forecasting | *Upcoming* | 🎯 **Targeting** |
+| **The "ROI / Optimization" Project** | Python, HuggingFace, Docker | *Upcoming* | 🎯 **Targeting** |
 | **Data Science Certifications** | Mathematics, AI Theory | *Upcoming* | 🎯 **Targeting** |
 
 <br/>
 
-### 🦁 Top 10 Modern Data Scientist Skills (2026)
+### 🧠 Top 10 Modern Data Scientist Skills (2026)
 *Based on current industry demand and market analysis.*
 
 1.  **Python & R Programming** (The backbone of data science)
@@ -42,13 +42,14 @@ My journey from Malaysia to the global stage. I am currently focused on building
 
 <br/>
 
-### ⚔️ My Skills (The Lion's Toolkit)
+### ⚔️ My Skills
 *Mapping my current technical arsenal to modern industry standards.*
 
 | Industry Skill | My Tool Implementation |
 | :--- | :--- |
 | **Programming** | `Python` (Primary Driver) |
 | **Generative AI** | `HuggingFace` (Inference & Fine-tuning) |
+| **Agentic AI** | `LangGraph` (Agent and Workflow Orchestration) |
 | **Model Deployment** | `Docker` & `FastAPI` & `Render` |
 | **Databases** | `SQL` & `PGVector` (Vector Embeddings) |
 | **IDE & Workflow** | `Trae` (AI-Augmented IDE) |
@@ -58,5 +59,5 @@ My journey from Malaysia to the global stage. I am currently focused on building
 
 ---
 <p align="center">
-  <i>Looking to collaborate on AI, Software, or Data Science projects? <a href="mailto:asadullah.q.bhatti@gmail.com">Roar at me!</a></i>
+  <i>Looking to collaborate on AI, Software, or Data Science projects? <a href="mailto:asadullah.q.bhatti@gmail.com">Reach out to me!</a></i>
 </p>
