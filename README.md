@@ -20,7 +20,7 @@ I am currently focused on building AI proof-of-concepts to strengthen my portfol
 | 🚩 Project / Goal | 🛠️ Tech Stack | 📅 Period | 🔗 Status / Repo |
 | :--- | :--- | :--- | :--- |
 | **The "Agentic Workflow" Showcase** | Python, SQL, HuggingFace | *Jun 2026 - Present* | 🚧 **In Progress** |
-| **The Medical VQA"** | SQL Stored Procs, Forecasting | *Upcoming* | 🎯 **Targeting** |
+| **The "Medical VQA"** | SQL Stored Procs, Forecasting | *Upcoming* | 🎯 **Targeting** |
 | **The "ROI / Optimization" Project** | Python, HuggingFace, Docker | *Upcoming* | 🎯 **Targeting** |
 | **Data Science Certifications** | Mathematics, AI Theory | *Upcoming* | 🎯 **Targeting** |
 
