@@ -40,21 +40,42 @@ Staff-level MLOps engineer focused on building and operating production machine-
 | **ML Frameworks** | PyTorch, HuggingFace Transformers, scikit-learn, LightGBM, XGBoost |
 | **Language** | Python |
 
-### 🚀 Featured Projects
+### 🚀 Projects
 
-| Repo | What it does | Stack |
-| :--- | :--- | :--- |
-| [expense-categorizer-mlops](https://github.com/asadullahqb/expense-categorizer-mlops) | End-to-end MLOps pipeline: OneDrive ingestion, ML/LLM transaction categorization, FastAPI serving, monitoring | Python, FastAPI, MLflow, Prefect, Azure App Service, Docker, GitHub Actions |
-| [TelcoMLOpsPOC](https://github.com/asadullahqb/TelcoMLOpsPOC) | Customer churn prediction POC on Azure ML v2 with managed online endpoints | Azure ML SDK v2, LightGBM, MLflow, GitHub Actions |
-| [Sovereign-AI-Proof-of-Concept](https://github.com/asadullahqb/Sovereign-AI-Proof-of-Concept) | Enterprise RAG platform: PDF ingestion, hybrid vector store, dual OpenAI/Azure OpenAI | LangChain, ChromaDB, Streamlit, OpenAI, Azure OpenAI |
-| [CLIP_Demo](https://github.com/asadullahqb/CLIP_Demo) | Zero-shot image classification with CLIP, with Colab + Streamlit demos | PyTorch, HuggingFace Transformers, Streamlit |
-| [Lattice](https://github.com/asadullahqb/Lattice) | AI-powered resume & job matcher with multi-agent HR pipeline | React, TypeScript, OpenAI, FastAPI, Vercel, Supabase |
-| [open-science-challenge](https://github.com/asadullahqb/open-science-challenge) | EY Open Science AI Data Challenge — urban heat island prediction | Python, XGBoost, geospatial (GeoPandas/Rasterio), genetic-algorithm feature selection |
-| [acepack-site](https://github.com/asadullahqb/acepack-site) | AcePack — production-ready GenAI systems | HTML, static site |
+#### ☁️ MLOps & Cloud
 
-### 🚧 In Progress
+- [expense-categorizer-mlops](https://github.com/asadullahqb/expense-categorizer-mlops) — End-to-end MLOps: OneDrive ingestion → ML/LLM categorization → FastAPI serving, MLflow, Azure CI/CD.
+- [TelcoMLOpsPOC](https://github.com/asadullahqb/TelcoMLOpsPOC) — Customer churn prediction POC on Azure ML v2 with managed online endpoints.
 
-**AWS MLOps Showcase** — building an end-to-end ML pipeline on AWS (training → experiment tracking → containerized serving → CI/CD) to complement the Azure-focused work above. Repo coming soon.
+#### ✨ Generative AI
+
+- [Sovereign-AI-Proof-of-Concept](https://github.com/asadullahqb/Sovereign-AI-Proof-of-Concept) — Enterprise RAG: PDF ingestion, hybrid ChromaDB vector store, LangChain, dual OpenAI/Azure OpenAI.
+- [Lattice](https://github.com/asadullahqb/Lattice) — AI resume & job matcher (React/TypeScript) with OpenAI scoring and a FastAPI multi-agent HR pipeline.
+- [medical-scribe-assistant](https://github.com/asadullahqb/medical-scribe-assistant) — Ambient AI scribe POC: browser speech-to-text + Qwen LLM SOAP note generation.
+- [retail-agentic-demo-hub](https://github.com/asadullahqb/retail-agentic-demo-hub) — Retail agentic AI demo hub: loyalty offers, store-ops copilot, promo-abuse graph.
+- [oai-jimmy-agent](https://github.com/asadullahqb/oai-jimmy-agent) — Experiment packaging an AI household-manager agent as a JSON package with embedded Python.
+- [technical-assessment-submission-aqb](https://github.com/asadullahqb/technical-assessment-submission-aqb) — AI engineering screening: JSON validator, ChromaDB RAG, DeepSeek multilingual summarizer.
+
+#### 📊 ML & Data Science
+
+- [CLIP_Demo](https://github.com/asadullahqb/CLIP_Demo) — Zero-shot image classification with CLIP (PyTorch + HuggingFace Transformers + Streamlit).
+- [project-aries](https://github.com/asadullahqb/project-aries) — Stock price prediction & trading signals (LSTM/BiLSTM, XGBoost) with backtesting.
+- [open-science-challenge](https://github.com/asadullahqb/open-science-challenge) — EY Open Science AI Data Challenge: urban heat island prediction (XGBoost + geospatial).
+- [gdp-and-crime-project](https://github.com/asadullahqb/gdp-and-crime-project) — District-level crime prediction in Malaysia from socio-economic features (coursework).
+- [SEEK-Case-Study](https://github.com/asadullahqb/SEEK-Case-Study) — SEEK marketplace analytics PoC: zero-applicant risk, liquidity forecasting, semantic matching.
+
+#### 🔬 Research
+
+- [oral-vqa-slr](https://github.com/asadullahqb/oral-vqa-slr) — Systematic review: VQA/VLMs for oral lesion classification on edge-cloud (LaTeX + data).
+- [TwoSumProblem](https://github.com/asadullahqb/TwoSumProblem) — Two Sum in O(n²), O(n), O(√n) via quantum Grover search.
+
+#### 🧰 Tools & Other
+
+- [acepack-site](https://github.com/asadullahqb/acepack-site) — Static site for AcePack (production-ready GenAI systems).
+- [Qarza](https://github.com/asadullahqb/Qarza) — Calm daily prayer companion (Flutter/Dart).
+- [Laptop-Automation](https://github.com/asadullahqb/Laptop-Automation) — Python utility (pyautogui) to keep a laptop/Colab active.
+
+*🚧 In progress: **AWS MLOps Showcase** — an end-to-end ML pipeline on AWS (training → experiment tracking → containerized serving → CI/CD). Repo coming soon.*
 
 <br/>
 
