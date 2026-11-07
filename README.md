@@ -40,6 +40,12 @@ Staff-level MLOps engineer focused on building and operating production machine-
 | **ML Frameworks** | PyTorch, HuggingFace Transformers, scikit-learn, LightGBM, XGBoost |
 | **Language** | Python |
 
+### 🤝 AcePack — AI Professional Services
+
+**AcePack** ([acepack-site](https://github.com/asadullahqb/acepack-site) · [acepack.io](http://acepack.io/)) — *You run the business; we run the AI — professionally, so you get more value at a fraction of the cost.* AI automation, AEO/SEO + content, video, lead-gen automation, RAG systems, and MLOps governance — built and operated for outcomes, not demos.
+
+**Capability spotlight:** Real Estate Digital Marketing — AI-powered digital operations for a real-estate agent (listings site, search/AI-engine visibility, lead qualification, video-first engagement). Full case study on the AcePack website.
+
 ### 🚀 Projects
 
 #### ☁️ MLOps & Cloud
